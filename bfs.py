@@ -25,7 +25,7 @@ BFS может быть использован для нахождения кр�
 from collections import deque
 
 
-def bsf(graph, start):
+def bfs(graph, start):
     visited = set()
     queue = deque([start])
     while queue:
