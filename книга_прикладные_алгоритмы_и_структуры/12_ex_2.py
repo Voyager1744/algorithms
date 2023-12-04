@@ -6,11 +6,15 @@
 """
 
 
-def golomb(n):
+def golomb(n, memo=None):
+    if memo is None:
+        memo = {}
     if n == 1:
         return 1
-    else:
-        return 1 + golomb(n - golomb(golomb(n - 1)))
+    if n in memo:
+        return memo[n]
+    memo[n] = 1 + golomb(n - golomb(golomb(n - 1, memo), memo), memo)
+    return memo[n]
 
 
-print(golomb(5))
+print(golomb(10))
