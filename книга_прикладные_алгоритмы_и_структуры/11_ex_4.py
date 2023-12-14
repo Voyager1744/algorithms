@@ -7,7 +7,6 @@
 
 
 def find_x(string, index=0):
-
     if string[0] == "x":
         return index
     else:

@@ -48,25 +48,25 @@
 
 def format_calendar(num_days, first_day):
     weekdays = {
-        'Monday': 0,
-        'Tuesday': 1,
-        'Wednesday': 2,
-        'Thursday': 3,
-        'Friday': 4,
-        'Saturday': 5,
-        'Sunday': 6
+        "Monday": 0,
+        "Tuesday": 1,
+        "Wednesday": 2,
+        "Thursday": 3,
+        "Friday": 4,
+        "Saturday": 5,
+        "Sunday": 6,
     }
 
     empty_days = weekdays[first_day]
-    days = [''] * empty_days + list(range(1, num_days + 1))
-    weeks = [days[i:i + 7] for i in range(0, len(days), 7)]
+    days = [""] * empty_days + list(range(1, num_days + 1))
+    weeks = [days[i : i + 7] for i in range(0, len(days), 7)]
 
     for week in weeks:
         for i in range(len(week)):
-            if week[i] == '':
-                week[i] = '..'
+            if week[i] == "":
+                week[i] = ".."
             elif week[i] < 10:
-                week[i] = '.' + str(week[i])
+                week[i] = "." + str(week[i])
 
     return weeks
 
@@ -77,4 +77,4 @@ n_days = int(n_days)
 weeks = format_calendar(n_days, first_day)
 
 for week in weeks:
-    print(' '.join(map(str, week)))
+    print(" ".join(map(str, week)))

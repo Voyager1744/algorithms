@@ -87,14 +87,15 @@ for _ in range(m):
             if side == "left":
                 seating[row_letters - 1] = seating[row_letters - 1].replace(".", "X", 1)
             else:
-                seating[row_letters - 1] = seating[row_letters - 1].rsplit(".", 1)[0] + "X"
+                seating[row_letters - 1] = (
+                    seating[row_letters - 1].rsplit(".", 1)[0] + "X"
+                )
 
     else:
         print("Cannot fulfill passengers requirements.")
 
 for row in seating:
     print(row)
-
 
     #
     #     res = []

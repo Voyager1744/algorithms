@@ -13,21 +13,25 @@
 
 """
 
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
         self.left = None
         self.right = None
 
+
 class Banch(dict):
     def __init__(self, *args, **kwargs):
         super(Banch, self).__init__(*args, **kwargs)
         self.__dict__ = self
 
+
 def get_layered_representation(root):
     result = []
     DFS(root, 0, result)
     return result
+
 
 def DFS(node, depth, result):
     if not node:

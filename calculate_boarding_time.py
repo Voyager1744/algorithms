@@ -1,11 +1,13 @@
 def calculate_boarding_time(n, passenger_list):
-    seats = [[False] * 6 for _ in range(31)]  # Матрица для отслеживания состояния каждого места
+    seats = [
+        [False] * 6 for _ in range(31)
+    ]  # Матрица для отслеживания состояния каждого места
     total_delay = 0  # Общее время задержки
 
     for passenger in passenger_list:
         arrival_time, seat = passenger.split()
         row = int(seat[:-1])
-        column = ord(seat[-1]) - ord('A')
+        column = ord(seat[-1]) - ord("A")
 
         # Поиск свободного места в том же ряду или следующих рядах
         next_row = row

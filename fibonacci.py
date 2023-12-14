@@ -1,6 +1,7 @@
-'''
+"""
 Возвращает n элемент последовательности Фибоначи.
-'''
+"""
+
 
 def ith_fibonacci(n):
     if n <= 1:
@@ -10,5 +11,6 @@ def ith_fibonacci(n):
         previous, current = current, previous + current
         # print(current)
     return current
+
 
 print(ith_fibonacci(10))

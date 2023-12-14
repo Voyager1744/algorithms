@@ -10,7 +10,7 @@ def max_number(numbers):
 
 
 def max_number2(numbers):
-    """ Пример квадратичной сложности."""
+    """Пример квадратичной сложности."""
 
     for i in range(len(numbers)):
         for j in range(i + 1, len(numbers)):
@@ -20,7 +20,7 @@ def max_number2(numbers):
 
 
 def max_number3(numbers):
-    """ Пример линейной сложности."""
+    """Пример линейной сложности."""
 
     greatest = numbers[0]
     for i in numbers:

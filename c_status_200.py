@@ -5,6 +5,7 @@
 
 """
 
+
 def get_number_of_good_pairs(numbers) -> int:
     res = 0
 

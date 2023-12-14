@@ -35,7 +35,9 @@ def unique_paths(rows, cols, memo=None):
         return 1
     if (rows, cols) in memo:
         return memo[(rows, cols)]
-    memo[(rows, cols)] = unique_paths(rows - 1, cols, memo) + unique_paths(rows, cols - 1, memo)
+    memo[(rows, cols)] = unique_paths(rows - 1, cols, memo) + unique_paths(
+        rows, cols - 1, memo
+    )
     return memo[(rows, cols)]
 
 

@@ -14,8 +14,7 @@ diversity = n
 for category in categories.values():
     category.sort()
     for i in range(1, len(category)):
-        diff = abs(order.index(category[i]) - order.index(category[i-1]))
+        diff = abs(order.index(category[i]) - order.index(category[i - 1]))
         diversity = min(diversity, diff)
 
 print(diversity)
-

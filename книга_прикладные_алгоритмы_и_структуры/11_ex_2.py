@@ -5,7 +5,7 @@
 
 
 def even_numbers(arr):
-    if len(arr) ==0:
+    if len(arr) == 0:
         return []
     if arr[0] % 2 == 0:
         return [arr[0]] + even_numbers(arr[1:])

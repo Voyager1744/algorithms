@@ -52,12 +52,12 @@ def get_product(data_center):
 # проходим по всем событиям и обрабатываем их
 for _ in range(q):
     event = input().split()
-    if event[0] == 'RESET':
+    if event[0] == "RESET":
         # если событие RESET, то перезагружаем весь дата-центр
         i = int(event[1]) - 1
         data_centers[i][0] += 1
         data_centers[i][1] = m
-    elif event[0] == 'DISABLE':
+    elif event[0] == "DISABLE":
         # если событие DISABLE, то выключаем соответствующий сервер
         i, j = map(int, event[1:])
         i -= 1
@@ -77,7 +77,7 @@ for _ in range(q):
     elif event[0] == "GETMIN":
         # если событие GETMIN, то находим номер дата-центра
         # с наименьшим произведением R_i * A_i
-        min_product = float('inf')
+        min_product = float("inf")
         min_dc = -1
         for i in range(n):
             product = get_product(data_centers[i])
@@ -86,6 +86,7 @@ for _ in range(q):
                 min_dc = i
         print(min_dc + 1)
 
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
@@ -93,8 +94,7 @@ class TreeNode:
         self.right = None
 
 
-
-'''
+"""
 3 3 12
 DISABLE 1 2
 DISABLE 2 1
@@ -111,4 +111,4 @@ GETMIN
 
 
 решение не проходит некоторые тесты
-'''
+"""

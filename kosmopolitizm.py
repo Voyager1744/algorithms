@@ -18,7 +18,7 @@ print(z)
 
 con_for_man = []
 countries_num = [x for x in range(1, N + 1)]
-print('countries_num ', countries_num)
+print("countries_num ", countries_num)
 res = []
 for i in range(Q):
     print(z[i])
@@ -28,4 +28,3 @@ for i in range(Q):
 
 
 print(res)
-

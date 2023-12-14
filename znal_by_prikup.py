@@ -33,7 +33,7 @@ print(deals)
 results = {}
 
 for b, s in deals:
-    res = (days_prices[s] - days_prices[b])
+    res = days_prices[s] - days_prices[b]
     results[(b, s)] = res
 
 sorted_results = dict(sorted(results.items(), key=lambda x: x[1]))
@@ -45,14 +45,13 @@ for days in res_days:
     print(*days)
 
 
-
 for i in buy_days:
     for j in sell_days:
         if j > i:
-            profit = (days_prices[j] - days_prices[i])
+            profit = days_prices[j] - days_prices[i]
             results[(i, j)] = profit
 
-            print(f'покупка в {i} день продажа в  {j} день, прибыль = {profit}')
+            print(f"покупка в {i} день продажа в  {j} день, прибыль = {profit}")
 
 print(results.values())
 

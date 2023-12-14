@@ -13,7 +13,9 @@ for _ in range(n):
 for category in categories.values():
     category.sort()
 
-sorted_categories = sorted(categories.keys(), key=lambda x: len(categories[x]), reverse=True)
+sorted_categories = sorted(
+    categories.keys(), key=lambda x: len(categories[x]), reverse=True
+)
 
 result = []
 while categories:

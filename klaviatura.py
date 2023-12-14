@@ -43,5 +43,3 @@ for i in range(len(change) - 1):
         count += 1
         lit = change[i + 1]
 print(count)
-
-
